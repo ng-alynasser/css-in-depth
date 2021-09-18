@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Working with relative units</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <h2>Single-origin</h2>
+      <div class="panel-body">
+        We have built partnership with small farms around the world to
+        hand-select beans at the peak of season. We then carefully roast in
+        <a href="/">small batches</a> to maximize their potential.
+      </div>
+    </div>
+    <br />
+    <div class="panel large">
+      <h2>Single-origin</h2>
+      <div class="panel-body">
+        We have built partnership with small farms around the world to
+        hand-select beans at the peak of season. We then carefully roast in
+        <a href="/">small batches</a> to maximize their potential.
+      </div>
+    </div>
+
+    <br />
+    <div class="square"></div>
+
+    <p class="about-us">
+      We have built partnerships with small farms around the world to
+      hand-select beans at the peak of season. We then carefully roast in small
+      batches to maximize their potential.
+    </p>
+
+    <div class="panel">
+      <h2>Single-origin</h2>
+      <div class="body">
+        We have built partnership with small farms around the world to
+        hand-select beans at the peak of season. We then carefully roast in
+        <a href="/">small batches</a> to maximize their potential.
+      </div>
+    </div>
+
+    <div class="dark">
+      <div class="panel">
+        <h2>Single-origin</h2>
+        <div class="body">
+          We have built partnership with small farms around the world to
+          hand-select beans at the peak of season. We then carefully roast in
+          <a href="/">small batches</a> to maximize their potential.
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    const rootElement = document.documentElement;
+    const styles = getComputedStyle(rootElement);
+    const mainColor = styles.getPropertyValue("--main-bg");
+    console.log(String(mainColor).trim()); // #fff
+
+    rootElement.style.setProperty("--main-bg", "#cdf");
+  </script>
+</html>
